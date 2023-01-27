@@ -19,7 +19,6 @@ Funcionalidade: Login
     Quando for realizado um clique no link create new account
     Entao a pagina create new account deve ser exibida
 
-  @loginComSucesso
   Esquema do Cenario: Realizar login com <identificacao>
     Quando os campos de login forem preenchidos da seguinte forma
       | login    | <login>    |
