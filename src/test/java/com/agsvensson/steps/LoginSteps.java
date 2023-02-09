@@ -17,6 +17,7 @@ import java.util.Map;
 
 public class LoginSteps {
     LoginPage loginPage;
+    NewAccountPage newAccountPage;
     String username;
 
     @Before
@@ -57,8 +58,8 @@ public class LoginSteps {
         }
     }
 
-    @Quando("for realizado um clique no icone de fechar da modal")
-    public void forRealizadoUmCliqueNoIconeDeFecharDaModal() {
+    @Quando("for realizado um clique no icone de fechar")
+    public void forRealizadoUmCliqueNoIconeDeFechar() {
         loginPage.clickBtnFechar();
     }
 
@@ -73,8 +74,8 @@ public class LoginSteps {
         Assert.assertEquals("CREATE ACCOUNT", newAccountPage.getTextNewAccount());
     }
 
-    @Quando("os campos de login forem preenchidos com os valores")
-    public void osCamposDeLoginForemPreenchidosComOsValores(Map<String, String> map) throws IOException {
+    @Quando("os campos de login forem preenchidos da seguinte forma")
+    public void osCamposDeLoginForemPreenchidosDaSeguinteForma(Map<String, String> map) throws IOException {
         username = map.get("login");
         String password = map.get("password");
         boolean remember = Boolean.parseBoolean(map.get("remember"));
@@ -110,6 +111,14 @@ public class LoginSteps {
     public void oBotaoSignInDevePermanecerDesabilitado() {
         boolean enabled = loginPage.isBtnSignIn();
         Assert.assertFalse(enabled);
+    }
+
+    @Dado("que esteja logado no sistema com")
+    public void queEstejaLogadoNoSistemaCom(Map<String, String> map) throws IOException {
+        queAModalEstejaSendoExibida();
+        osCamposDeLoginForemPreenchidosDaSeguinteForma(map);
+        forRealizadoUmCliqueNoBotaoSignIn();
+        deveSerPossivelLogarNoSistema();
     }
 
 }
