@@ -20,21 +20,21 @@ public class LoginMap {
     @FindBy(css = "*[name='password']")
     public WebElement inpPassword;
 
-    @FindBy (css = "#sign_in_btnundefined")
+    @FindBy(css = "#sign_in_btnundefined")
     public WebElement btnSignIn;
 
-    @FindBy (css = "*[name='remember_me']")
+    @FindBy(css = "*[name='remember_me']")
     public WebElement inpRemember;
 
-    @FindBy (linkText = "CREATE NEW ACCOUNT")
+    @FindBy(linkText = "CREATE NEW ACCOUNT")
     public WebElement linkCreateAccount;
 
-    @FindBy (css = ".loader")
+    @FindBy(css = ".loader")
     public WebElement divLoader;
 
     @FindBy(css = ".containMiniTitle")
     public WebElement txtLogado;
 
-    @FindBy (xpath = "//label[contains(text(), 'Incorrect')]")
+    @FindBy(xpath = "//label[contains(text(), 'Incorrect')]")
     public WebElement txtErroLogin;
 }

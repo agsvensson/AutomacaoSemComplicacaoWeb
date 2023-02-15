@@ -14,4 +14,6 @@ public class EditAccountMap {
     @FindBy(id = "save_btnundefined")
     public WebElement btnSave;
 
+    @FindBy(name = "countryListboxAccountDetails")
+    public WebElement slcCountry;
 }

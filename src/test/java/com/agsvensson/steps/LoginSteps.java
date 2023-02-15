@@ -56,6 +56,7 @@ public class LoginSteps {
         } catch (Exception e) {
             throw new Exception("A janela modal nao foi fechada");
         }
+
     }
 
     @Quando("for realizado um clique no icone de fechar")
@@ -88,7 +89,7 @@ public class LoginSteps {
         }
         loginPage.aguardaLoader();
         if (remember) loginPage.clickInpRemember();
-        Driver.printScreen("Preenchimento dos campos de login:");
+        Driver.printScreen("Preenchimento dos campos de login");
     }
 
     @Quando("for realizado um clique no botao sign in")
@@ -99,7 +100,7 @@ public class LoginSteps {
     @Entao("deve ser possivel logar no sistema")
     public void deveSerPossivelLogarNoSistema() throws IOException {
         Assert.assertEquals(username, loginPage.getUsuarioLogado());
-        Driver.printScreen("Logado no sistema:");
+        Driver.printScreen("logado no sistema");
     }
 
     @Entao("o sistema deve exibir uma mensagem de erro")
@@ -120,5 +121,4 @@ public class LoginSteps {
         forRealizadoUmCliqueNoBotaoSignIn();
         deveSerPossivelLogarNoSistema();
     }
-
 }
