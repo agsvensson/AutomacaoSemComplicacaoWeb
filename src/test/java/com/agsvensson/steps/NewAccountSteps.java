@@ -20,6 +20,7 @@ public class NewAccountSteps {
         newAccountPage = new NewAccountPage();
         Driver.getDriver().get("https://advantageonlineshopping.com/#/");
         Driver.getDriver().get("https://advantageonlineshopping.com/#/register");
+        Assert.assertEquals("CREATE ACCOUNT", newAccountPage.getTextNewAccount());
     }
 
     @Quando("os campos de cadastro estiverem preenchidos com")

@@ -30,7 +30,7 @@ public class MyAccountPage {
 
     public String getTextUsuario() {
         Driver.visibilityOf(myAccountMap.linkEdit);
-        return myAccountMap.linkEdit.getText();
+        return myAccountMap.textUsuario.getText();
     }
 
     public void clickBtnDelete() {
@@ -43,4 +43,8 @@ public class MyAccountPage {
         myAccountMap.btnYes.click();
     }
 
+    public String getTextDelete() {
+        Driver.visibilityOf(myAccountMap.textDelete);
+        return myAccountMap.textDelete.getText();
+    }
 }

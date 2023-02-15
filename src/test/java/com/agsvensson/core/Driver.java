@@ -58,7 +58,7 @@ public class Driver {
     private static void startChrome() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
-        Boolean headless = Boolean.parseBoolean(System.getProperty("headless"));
+        boolean headless = Boolean.parseBoolean(System.getProperty("headless"));
         chromeOptions.setHeadless(headless);
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().setSize(new Dimension(1200, 720));
@@ -84,6 +84,7 @@ public class Driver {
         String caminho = "src/test/resources/evidencias";
         diretorio = new File(caminho + "/" + nomeCenario);
         diretorio.mkdir();
+
         numPrint = 0;
     }
 
@@ -91,6 +92,7 @@ public class Driver {
         numPrint++;
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         String caminho = diretorio.getPath() + "/" + numPrint + " - " + passo + ".png";
+
         FileUtils.copyFile(file, new File(caminho));
     }
 

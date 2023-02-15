@@ -3,6 +3,7 @@ package com.agsvensson.pages;
 import com.agsvensson.core.Driver;
 import com.agsvensson.maps.EditAccountMap;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class EditAccountPage {
 
@@ -23,6 +24,7 @@ public class EditAccountPage {
     }
 
     public void clickBtnSave() {
+        Driver.aguardaOptions(new Select(editAccountMap.slcCountry));
         editAccountMap.btnSave.click();
     }
 

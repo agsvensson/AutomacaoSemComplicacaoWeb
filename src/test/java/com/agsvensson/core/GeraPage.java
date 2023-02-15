@@ -12,7 +12,7 @@ public class GeraPage {
 
     @Test
     public void geraPage() throws FileNotFoundException {
-        String diretorio = "src/test/java/br/com/chronosAcademy/maps";
+        String diretorio = "src/test/java/br/com/agsvensson/maps";
         File file = new File(diretorio);
         File afile[] = file.listFiles();
         int i = 0;
