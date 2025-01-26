@@ -11,7 +11,7 @@
 - Maven
 - Selenium Web Driver
 - Escrita de cenários padrão BDD com Cucumber/Gherkin
-- Design Pattern PageFactory
+- Design Patterns Page Object e Page Factory
 
 
 #### Para clonar o projeto no Git:
