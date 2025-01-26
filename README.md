@@ -1,9 +1,9 @@
-## Curso Automação Web - Chronos Academy
+## Curso Automação Web
 
 
 ![Project Status Badge](https://img.shields.io/badge/Status%20do%20projeto-Concluído-green)
 
-### Projeto realizado no curso "Automação Sem Complicação Web 2.0" da [Chronos Academy](https://chronosacademy.com.br/), ministrado pelo Adam Luchini.
+### Projeto realizado no curso "Automação Sem Complicação Web 2.0" da [Chronos Academy](https://chronosacademy.com.br/).
 
 #### Tecnologias utilizadas:
 - Java 11
